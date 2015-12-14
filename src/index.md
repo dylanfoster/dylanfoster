@@ -31,7 +31,7 @@ layout: page.html
 </div>
 
 <!-- about -->
-<div class="row text-center">
+<div class="row text-center section">
   <div class="col-12">
     <h2 class="header header_section">About</h2>
   </div>
@@ -46,7 +46,7 @@ layout: page.html
 </div>
 
 <!-- cv -->
-<div class="row text-center">
+<div class="row text-center section">
   <div class="col-12">
     <h2 class="header header_section">CV</h2>
   </div>
@@ -59,7 +59,8 @@ layout: page.html
   <div class="col-4 tile twitter" data-toggle="twitter">
   </div>
 </div>
-<div class="row text-center">
+
+<div class="row text-center section">
   <div class="col-12">
     <h2 class="header header_section">Projects</h2>
   </div>
@@ -84,7 +85,7 @@ layout: page.html
 </div>
 
 <!-- contact -->
-<div class="row">
+<div class="row section">
   <div class="col-12 text-center">
     <h2 class="header header_section">Contact</h2>
   </div>
