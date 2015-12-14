@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{#block "head"}}
+    {{>head}}
+    {{/block}}
+  </head>
+  <body>
+    <div class="page">
+      {{#block "body"}}
+      {{/block}}
+    </div>
+
+    {{#block "scripts"}}
+    <script src="http://localhost:35729/livereload.js"></script>
+    <script src="assets/javascripts/app.js"></script>
+    {{/block}}
+  </body>
+</html>
