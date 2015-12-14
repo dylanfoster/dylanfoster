@@ -1,15 +1,17 @@
 @import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100);
 
-$font-family: "News Cycle", Helvetica;
+$font-family: "lato", Helvetica;
 
 * {
   box-sizing: border-box;
   transition: .2s;
+  font-weight: 400;
 }
 
 html {
   font-family: $font-family;
+  line-height: 1.5;
 }
 
 body {
@@ -24,6 +26,44 @@ body {
   text-align: right;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-thin {
+  font-weight: 100;
+}
+
+.text-xl {
+  font-size: 3rem;
+}
+
+.text-l {
+  font-size: 2.5rem;
+}
+
+.text-m {
+  font-size: 1.125rem;
+}
+
+.text-s {
+  font-size: 0.8rem;
+}
+
+.header {
+  @extend .text-thin;
+  &_main {
+    @extend .text-xl
+  }
+  &_section {
+    @extend .text-l;
+  }
+  &_sub {
+    font-weight: 400;
+    @extend .text-m;
+  }
+}
+
 .page{
   margin-right: auto;
   margin-left: auto;
@@ -35,6 +75,18 @@ body {
   &.landing {
     min-height: 568px;
     background-color: #000;
+  }
+  &.logo {
+    margin: 30px 0;
+    & img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &.heading {
+    padding: 50px;
+    max-width: 960px;
+    margin: 0 auto;
   }
 }
 
@@ -90,6 +142,12 @@ body {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .landing {
@@ -213,4 +271,49 @@ body {
   to {
     background-position: 300px 33%;
   }
+}
+
+.tile {
+  border-right: 1px solid #d6d6d6;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  &.apple {
+    background-image: url("/assets/images/apple.png");
+    background-size: cover;
+  }
+  &.google {
+    background-image: url("/assets/images/google.png");
+    background-size: 40%;
+  }
+  &.twitter {
+    background-image: url("/assets/images/twitter.png");
+    background-size: 40%;
+  }
+  &.bonfire {
+
+  }
+  &.hotcakes {
+    background-image: url("/assets/images/hotcakes.png");
+    background-size: 40%;
+  }
+  &.topsecret {
+    background-image: url("/assets/images/up.png");
+    background-size: cover;
+    opacity: 0.1;
+    &:after {
+      font-family: FontAwesome;
+      content: "\f05e";
+      color: red;
+      font-size: 18rem;
+      text-align: center;
+      margin-left: 25%;
+    }
+  }
+}
+
+.sub-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 12px;
 }
