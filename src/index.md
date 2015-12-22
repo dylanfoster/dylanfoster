@@ -186,7 +186,7 @@ layout: page.html
               </a>
             </li>
             <li class="references__item">
-              Matt Talebi | Co-worker
+              Matt Talebi | Coworker
               <a href="mailto:matt.talebi@apple.com" class="link link_primary">
                 <span class="references__contact">matt.talebi@gmail.com</span>
               </a>
