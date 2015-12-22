@@ -48,7 +48,18 @@ body {
 }
 
 .text-s {
-  font-size: 1rem;;
+  font-size: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  transition: color 0s;
+  @include modifier("primary") {
+    color: #5d5d5d;
+    &:hover {
+      coloR: #4d4d4d;
+    }
+  }
 }
 
 .container {
@@ -57,6 +68,7 @@ body {
 }
 
 .header {
+  color: #fff;
   @extend .text-thin;
   @include modifier("title") {
     @extend .text-m;
@@ -70,14 +82,23 @@ body {
   &_sub {
     font-weight: 400;
     @extend .text-m;
+    color: #616161;
   }
 }
 
 .page{
   margin-right: auto;
   margin-left: auto;
+  background-color: #262626;
+  color: #fff;
 }
 
+.section {
+  @include modifier("main") {
+    background-color: #FFF;
+    color: #333;
+  }
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -87,9 +108,10 @@ body {
   &.landing {
     min-height: 768px;
     background-color: #000;
+    box-shadow: 0px 30px 40px 10px rgba(0, 0, 0, 0.8);
   }
   &.logo {
-    margin: 30px 0;
+    padding-top: 30px;
     & img {
       display: block;
       margin: 0 auto;
@@ -160,6 +182,7 @@ body {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
+  color: #5d5d5d;
 }
 
 .landing {
@@ -286,35 +309,34 @@ body {
 }
 
 .tile {
-  border-right: 1px solid #d6d6d6;
   background-position: 50%;
   background-repeat: no-repeat;
+  background-size: 40%;
   min-height: 300px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
   &.apple {
     background-image: url("/assets/images/apple.png");
-    background-size: cover;
-    border-left: 1px solid #d6d6d6;
+    background-size: 90%;
   }
   &.google {
     background-image: url("/assets/images/google.png");
-    background-size: 40%;
   }
   &.twitter {
     background-image: url("/assets/images/twitter.png");
-    background-size: 40%;
   }
   &.bonfire {
-    border-left: 1px solid #d6d6d6;
+    background-image: url("/assets/images/bonfire.png");
   }
   &.hotcakes {
     background-image: url("/assets/images/hotcakes.png");
-    background-size: 40%;
   }
   &.topsecret {
     background-image: url("/assets/images/ban.png");
-    background-size: 70%;
-    background-position: 50%;
-    border-right: 1px solid #d6d6d6;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(0.8, 0.8);
   }
 }
 
@@ -324,6 +346,17 @@ body {
   padding: 0 12px;
 }
 
+.modal__backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.8);
+  visibility: hidden;
+  opacity: 0;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -331,22 +364,91 @@ body {
   bottom: 0;
   left: 0;
   background-color: rgba(51, 51, 51, 0.8);
-  display: none;
+  z-index: 10;
   @include element("container") {
     position: absolute;
-    height: 500px;
-    width: 400px;
     top: 50%;
     left: 50%;
-    margin-top: -250px;
-    margin-left: -200px;
-    background-color: #fff;
+    width: 50%;
+    max-width: 600px;
+    min-width: 300px;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    perspective: 1300px;
+    backface-visibility: hidden;
+    visibility: visible;
+    opacity: 1;
+  }
+  @include element("content") {
+    position: relative;
+    background-color: #262626;
+    border: 1px solid #d6d6d6;
     border-radius: 3px;
-    display: none;
+    transform: rotateY(-70deg);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    &.show {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
   }
   @include element("title") {
     border-bottom: 1px solid #d6d6d6;
     padding: 0 20px;
     text-align: center;
   }
+  @include element("close") {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    height: 20px;
+    width: 20px;
+    background-image: url("/assets/images/close.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    &:hover {
+      cursor: pointer;
+      transform: rotate(180deg);
+    }
+  }
+  @include element("body") {
+    padding: 20px;
+    color: #5d5d5d;
+  }
+}
+
+.skill-set {
+  list-style-type: none;
+  padding: 5px;
+  @include element("item") {
+    max-width: 300px;
+    padding: 0 5px;
+  }
+  @include element("icons") {
+    float: right;
+    color: #29F3C3;
+  }
+}
+
+.references {
+  list-style-type: none;
+  padding: 5px;
+  @include element("item") {
+    padding: 5px;
+  }
+  @include element("contact") {
+    display: block;
+    &:before {
+      font-family: FontAwesome;
+      content: "\f003";
+      margin-right: 10px;
+      color: #29F3C3;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
 }
