@@ -1,5 +1,6 @@
 @import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100);
+@import "_mixins";
 
 $font-family: "lato", Helvetica;
 
@@ -47,11 +48,19 @@ body {
 }
 
 .text-s {
-  font-size: 0.8rem;
+  font-size: 1rem;;
+}
+
+.container {
+  margin: 30px;
+  padding: 30px;
 }
 
 .header {
   @extend .text-thin;
+  @include modifier("title") {
+    @extend .text-m;
+  }
   &_main {
     @extend .text-xl
   }
@@ -76,7 +85,7 @@ body {
     margin-top: 100px;
   }
   &.landing {
-    min-height: 568px;
+    min-height: 768px;
     background-color: #000;
   }
   &.logo {
@@ -160,7 +169,7 @@ body {
     position: absolute;
     top: 0;
     z-index: 2;
-    animation: moon 50s linear infinite;
+//    animation: moon 50s linear infinite;
     background-size: 35%;
     width: 100%;
     height: 100%;
@@ -178,30 +187,30 @@ body {
     &_1 {
       background-image: url("/assets/images/cloud1.png");
       background-position: -800px 0;
-      animation: cloud_1 60s linear infinite;
+//      animation: cloud_1 60s linear infinite;
     }
     &_2 {
       background-image: url("/assets/images/cloud2.png");
       background-position: -600px 45%;
-      animation: cloud_2 45s linear infinite;
+//      animation: cloud_2 45s linear infinite;
       z-index: 1;
     }
     &_3 {
       background-image: url("/assets/images/cloud3.png");
       background-position: -400px 85%;
-      animation: cloud_3 51s linear infinite;
+//      animation: cloud_3 51s linear infinite;
       z-index: 4;
     }
     &_4 {
       background-image: url("/assets/images/cloud1.png");
       background-position: -300px 58%;
-      animation: cloud_4 32s linear infinite;
+//      animation: cloud_4 32s linear infinite;
       z-index: 2;
     }
     &_5 {
       background-image: url("/assets/images/cloud3.png");
       background-position: 600px 33%;
-      animation: cloud_5 63s linear infinite;
+//      animation: cloud_5 63s linear infinite;
       z-index: 1;
     }
   }
@@ -284,6 +293,7 @@ body {
   &.apple {
     background-image: url("/assets/images/apple.png");
     background-size: cover;
+    border-left: 1px solid #d6d6d6;
   }
   &.google {
     background-image: url("/assets/images/google.png");
@@ -294,23 +304,17 @@ body {
     background-size: 40%;
   }
   &.bonfire {
+    border-left: 1px solid #d6d6d6;
   }
   &.hotcakes {
     background-image: url("/assets/images/hotcakes.png");
     background-size: 40%;
   }
   &.topsecret {
-    background-image: url("/assets/images/up.png");
-    background-size: cover;
-    opacity: 0.1;
-    &:after {
-      font-family: FontAwesome;
-      content: "\f05e";
-      color: red;
-      font-size: 18rem;
-      text-align: center;
-      margin-left: 25%;
-    }
+    background-image: url("/assets/images/ban.png");
+    background-size: 70%;
+    background-position: 50%;
+    border-right: 1px solid #d6d6d6;
   }
 }
 
@@ -318,4 +322,31 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 0 12px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.8);
+  display: none;
+  @include element("container") {
+    position: absolute;
+    height: 500px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -200px;
+    background-color: #fff;
+    border-radius: 3px;
+    display: none;
+  }
+  @include element("title") {
+    border-bottom: 1px solid #d6d6d6;
+    padding: 0 20px;
+    text-align: center;
+  }
 }

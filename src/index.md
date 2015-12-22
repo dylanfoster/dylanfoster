@@ -30,57 +30,59 @@ layout: page.html
   </div>
 </div>
 
-<!-- about -->
-<div class="row text-center section">
-  <div class="col-12">
-    <h2 class="header header_section">About</h2>
+<div class="container">
+  <!-- about -->
+  <div class="row text-center section">
+    <div class="col-12">
+      <h2 class="header header_section">About</h2>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-12">
-    <p class="content text-m">
-      Lorem ipsum dolor sit amet, ut qui viris percipit, his oblique mnesarchum id, postea praesent urbanitas pro ad. Usu te nulla noster percipit, no eum quaeque temporibus. Mel regione partiendo cu. Duo eu adolescens scripserit, ex mea dicit partem torquatos, ex assum graeco his. Diam ridens aperiam vis ea. Ei admodum dignissim eum, no eam dictas convenire.
-    </p>
+  <div class="row">
+    <div class="col-12">
+      <p class="content text-m">
+        Lorem ipsum dolor sit amet, ut qui viris percipit, his oblique mnesarchum id, postea praesent urbanitas pro ad. Usu te nulla noster percipit, no eum quaeque temporibus. Mel regione partiendo cu. Duo eu adolescens scripserit, ex mea dicit partem torquatos, ex assum graeco his. Diam ridens aperiam vis ea. Ei admodum dignissim eum, no eam dictas convenire.
+      </p>
+    </div>
   </div>
-</div>
 
-<!-- cv -->
-<div class="row text-center section">
-  <div class="col-12">
-    <h2 class="header header_section">CV</h2>
+  <!-- cv -->
+  <div class="row text-center section">
+    <div class="col-12">
+      <h2 class="header header_section">CV</h2>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-4 tile apple" data-toggle="apple">
+  <div class="row">
+    <div class="col-4 tile apple" data-toggle="apple">
+    </div>
+    <div class="col-4 tile google" data-toggle="google">
+    </div>
+    <div class="col-4 tile twitter" data-toggle="twitter">
+    </div>
   </div>
-  <div class="col-4 tile google" data-toggle="google">
-  </div>
-  <div class="col-4 tile twitter" data-toggle="twitter">
-  </div>
-</div>
 
-<div class="row text-center section">
-  <div class="col-12">
-    <h2 class="header header_section">Projects</h2>
+  <div class="row text-center section">
+    <div class="col-12">
+      <h2 class="header header_section">Projects</h2>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-4 tile bonfire" data-toggle="bonfire"></div>
-  <div class="col-4 tile hotcakes" data-toggle="hotcakes"></div>
-  <div class="col-4 tile topsecret" data-toggle="topsecret"></div>
-</div>
-<div class="row text-center">
-  <div class="col-4 sub-header">
-    <h3 class="header header_sub">Bonfire</h3>
-    <a href="https://github.com/BonfireCMS/Bonfire" target=_blank>https://github.com/BonfireCMS/Bonfire</a>
+  <div class="row">
+    <div class="col-4 tile bonfire" data-toggle="bonfire"></div>
+    <div class="col-4 tile hotcakes" data-toggle="hotcakes"></div>
+    <div class="col-4 tile topsecret" data-toggle="topsecret"></div>
   </div>
-  <div class="col-4 sub-header">
-    <h3 class="header header_sub">Hotcakes</h3>
-    <a href="https://github.com/dylanfoster/hotcakes" target=_blank>https://github.com/dylanfoster/hotcakes</a>
-  </div>
-  <div class="col-4 sub-header">
-    <h3 class="header header_sub">Top secret</h3>
+  <div class="row text-center">
+    <div class="col-4 sub-header">
+      <h3 class="header header_sub">Bonfire</h3>
+      <a href="https://github.com/BonfireCMS/Bonfire" target=_blank>https://github.com/BonfireCMS/Bonfire</a>
+    </div>
+    <div class="col-4 sub-header">
+      <h3 class="header header_sub">Hotcakes</h3>
+      <a href="https://github.com/dylanfoster/hotcakes" target=_blank>https://github.com/dylanfoster/hotcakes</a>
+    </div>
+    <div class="col-4 sub-header">
+      <h3 class="header header_sub">Top secret</h3>
+    </div>
   </div>
 </div>
 
@@ -95,3 +97,12 @@ layout: page.html
     <img class="image_responsive" src="/assets/images/maps.png" alt="map" />
   </div>
 </div>
+</div>
+<div class="modal">
+  <div class="modal__container">
+    <div class="modal__title">
+      <h3 class="header header_title">Apple | Interactive Developer</h3>
+    </div>
+    <div class="modal__content">
+    </div>
+  </div>
