@@ -31,7 +31,7 @@ class Modal extends EventedElement {
     this.container = this.find(".modal__content");
     this.closeButton = this.find(".modal__close");
     this.render();
-    this.closeButton.addEvent("click", this.destroy.bind(this));
+    this.closeButton.addEvent("click", (e) => this.destroy());
   }
 
   destroy() {

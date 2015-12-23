@@ -314,7 +314,7 @@ body {
   background-repeat: no-repeat;
   background-size: 40%;
   min-height: 300px;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, border-left 0.2s ease-out, border-right 0.2s ease-out;
   z-index: 2;
   &.apple {
     background-image: url("/assets/images/apple.png");
@@ -328,6 +328,7 @@ body {
   }
   &.bonfire {
     background-image: url("/assets/images/bonfire.png");
+    background-size: 60%;
   }
   &.hotcakes {
     background-image: url("/assets/images/hotcakes.png");
@@ -337,7 +338,9 @@ body {
   }
   &:hover {
     cursor: pointer;
-    transform: scale(0.8, 0.8);
+    transform: scale(1.1, 1.1);
+    border-right: 1px solid #29F3C3;
+    border-left: 1px solid #29F3C3;
   }
 }
 
