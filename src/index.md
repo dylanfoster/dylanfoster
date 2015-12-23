@@ -145,6 +145,16 @@ layout: page.html
               </span>
             </li>
             <li class="skill-set__item">
+              Ember.js
+              <span class="skill-set__icons">
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-circle"></i>
+                <i class="fa fa-adjust fa-rotate-180"></i>
+              </span>
+            </li>
+            <li class="skill-set__item">
               HTML
               <span class="skill-set__icons">
                 <i class="fa fa-circle"></i>
