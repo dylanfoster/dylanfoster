@@ -57,7 +57,7 @@ body {
   @include modifier("primary") {
     color: #5d5d5d;
     &:hover {
-      coloR: #4d4d4d;
+      color: #4d4d4d;
     }
   }
 }
@@ -73,14 +73,14 @@ body {
   @include modifier("title") {
     @extend .text-m;
   }
-  &_main {
+  @include modifier("main") {
     color: #999;
     @extend .text-xl
   }
-  &_section {
+  @include modifier("section") {
     @extend .text-l;
   }
-  &_sub {
+  @include modifier("sub") {
     font-weight: 400;
     @extend .text-m;
     color: #616161;
@@ -193,7 +193,7 @@ body {
     position: absolute;
     top: 0;
     z-index: 2;
-    animation: moon 50s linear infinite;
+    //animation: moon 50s linear infinite;
     background-size: 35%;
     width: 100%;
     height: 100%;
@@ -211,30 +211,30 @@ body {
     &_1 {
       background-image: url("/assets/images/cloud1.png");
       background-position: -800px 0;
-      animation: cloud_1 60s linear infinite;
+      //animation: cloud_1 60s linear infinite;
     }
     &_2 {
       background-image: url("/assets/images/cloud2.png");
       background-position: -600px 45%;
-      animation: cloud_2 45s linear infinite;
+      //animation: cloud_2 45s linear infinite;
       z-index: 1;
     }
     &_3 {
       background-image: url("/assets/images/cloud3.png");
       background-position: -400px 85%;
-      animation: cloud_3 51s linear infinite;
+      //animation: cloud_3 51s linear infinite;
       z-index: 4;
     }
     &_4 {
       background-image: url("/assets/images/cloud1.png");
       background-position: -300px 58%;
-      animation: cloud_4 32s linear infinite;
+      //animation: cloud_4 32s linear infinite;
       z-index: 2;
     }
     &_5 {
       background-image: url("/assets/images/cloud3.png");
       background-position: 600px 33%;
-      animation: cloud_5 63s linear infinite;
+      //animation: cloud_5 63s linear infinite;
       z-index: 1;
     }
   }
@@ -436,15 +436,12 @@ body {
   padding: 5px;
   @include element("item") {
     padding: 5px;
+    & > span {
+      display: block;
+    }
   }
   @include element("contact") {
-    display: block;
-    &:before {
-      font-family: FontAwesome;
-      content: "\f003";
-      margin-right: 10px;
-      color: #29F3C3;
-    }
+    margin: 3px;
   }
 }
 

@@ -181,21 +181,43 @@ layout: page.html
           <ul class="references">
             <li class="references__item">
               Ben Truyman | Lead
-              <a href="mailto:btruyman@apple.com" class="link link_primary">
-                <span class="references__contact">btruyman@apple.com</span>
-              </a>
+              <span>
+                <a target="_blank" href="https://www.linkedin.com/in/bentruyman" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-linkedin"></i>
+                  </span>
+                </a>
+                <a href="mailto:btruyman@apple.com" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                </a>
+              </span>
             </li>
             <li class="references__item">
               Matt Talebi | Coworker
-              <a href="mailto:matt.talebi@apple.com" class="link link_primary">
-                <span class="references__contact">matt.talebi@gmail.com</span>
-              </a>
+              <span>
+                <a target="_blank" href="https://linkedin.com/in/matthewtalebi" target=_blank class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-linkedin"></i>
+                  </span>
+                </a>
+              </span>
             </li>
             <li class="references__item">
               Carlos Solorzano | Manager
-              <a href="mailto:csolorzano@apple.com" class="link link_primary">
-                <span class="references__contact">csolorzano@apple.com</span>
-              </a>
+              <span>
+                <a target="_blank" href="https://www.linkedin.com/in/carlosasolorzano" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-linkedin"></i>
+                  </span>
+                </a>
+                <a href="mailto:csolorzano@apple.com" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                </a>
+              </span>
             </li>
           </ul>
         </div>
@@ -266,15 +288,33 @@ layout: page.html
           <ul class="references">
             <li class="references__item">
               Srinivas Vallabhaneni | Project Manager
-              <a href="mailto:vallabhs@gmail.com" class="link link_primary">
-                <span class="references__contact">vallabhs@gmail.com</span>
-              </a>
+              <span>
+                <a target="_blank" href="https://www.linkedin.com/in/vallabhs" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-linkedin"></i>
+                  </span>
+                </a>
+                <a href="mailto:vallabhs@gmail.com" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                </a>
+              </span>
             </li>
             <li class="references__item">
               John Montgomery | SVP Global delivery
-              <a href="mailto:johnlmontgomery@gmail.com" class="link link_primary">
-                <span class="references__contact">johnlmontgomery@gmail.com</span>
-              </a>
+              <span>
+                <a target="_blank" href="https://www.linkedin.com/in/johnlmontgomery" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-linkedin"></i>
+                  </span>
+                </a>
+                <a href="mailto:johnlmontgomery@gmail.com" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                </a>
+              </span>
             </li>
           </ul>
         </div>
@@ -345,21 +385,48 @@ layout: page.html
           <ul class="references">
             <li class="references__item">
               Ernest De La Rosa | Project Manager
-              <a href="mailto:ernestoartfx@gmail.com" class="link link_primary">
-                <span class="references__contact">ernestoartfx@gmail.com</span>
-              </a>
+              <span>
+                <a target="_blank" href="https://www.linkedin.com/in/edelarosa1" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-linkedin"></i>
+                  </span>
+                </a>
+                <a href="mailto:ernestoartfx@gmail.com" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                </a>
+              </span>
             </li>
             <li class="references__item">
               John Montgomery | SVP Global delivery
-              <a href="mailto:johnlmontgomery@gmail.com" class="link link_primary">
-                <span class="references__contact">johnlmontgomery@gmail.com</span>
-              </a>
+              <span>
+                <a target="_blank" href="https://www.linkedin.com/in/johnlmontgomery" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-linkedin"></i>
+                  </span>
+                </a>
+                <a href="mailto:johnlmontgomery@gmail.com" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                </a>
+              </span>
             </li>
             <li class="references__item">
               Michael Creasy | Mobile QA Manager
-              <a href="mailto:michael@creasy.org" class="link link_primary">
-                <span class="references__contact">michael@creasy.org</span>
-              </a>
+              <span>
+                <a target="_blank" href="https://www.linkedin.com/in/michaelcreasy" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-linkedin"></i>
+                  </span>
+                </a>
+                <a href="mailto:michael@creasy.org" class="link link_primary">
+                  <span class="references__contact">
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                </a>
+              </span>
             </li>
           </ul>
         </div>
