@@ -91,6 +91,16 @@ button {
 
 .page {
   transform: translateY(-243px);
+  &.not-found {
+    transform: translateY(0);
+    margin-top: 100px;
+    text-align: center;
+    padding-bottom: 50%;
+    background-image: url(/assets/images/ahahah.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+  }
 }
 
 .hero {
