@@ -41,6 +41,11 @@ layout: page.html
         <div class="projects-list__item" style="background-image: url('{{project.image}}');">
           <div class="projects-list__item__description">
             <p>{{project.description}}</p>
+            <div class="projects-list__item__tags">
+              {{#each project.tags as |tag|}}
+              <span class="project-tag">{{tag}}</span>
+              {{/each}}
+            </div>
           </div>
         </div>
       </a>
@@ -50,8 +55,9 @@ layout: page.html
 </section>
 
 <section class="section section_contact">
+  <div class="map"></div>
   <h2 class="heading heading_sub heading_section" id="contact">Beep</h2>
-  <div class="section__content">
+  <div class="section__content section_contact__content">
     <form id="contact-form" class="form" action="http://formspree.io/dylan947@gmail.com" method="post">
       <div class="form__section form__section_input">
         <div class="form__group">
@@ -74,6 +80,17 @@ layout: page.html
         <input type="text" name="_gotcha" style="display:none" />
       </div>
       <div class="form__section form__section_actions">
+        <div class="form__group form__group_social">
+          <a class="link link_primary" href="https://twitter.com/dylfos" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a class="link link_primary" href="https://facebook.com/dylan947" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a class="link link_primary" href="https://github.com/dylanfoster" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
         <div class="form__group form__group_submit">
           <button class="button button_primary" form="contact-form">
             Say hello!

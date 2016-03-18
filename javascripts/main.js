@@ -126,3 +126,18 @@ window.onscroll = e => {
     }
   }
 };
+
+let map
+
+function loadMap() {
+  const mapContainer = document.querySelector(".map");
+
+  map = new google.maps.Map(mapContainer, {
+    center: { lat: 37.338208, lng: -121.886329 },
+    scrollwheel: false,
+    zoom: 15
+  });
+
+}
+
+window.loadMap = loadMap;

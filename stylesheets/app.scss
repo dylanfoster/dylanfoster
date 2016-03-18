@@ -108,6 +108,7 @@ button {
 
 .section {
   padding-top: 200px;
+  position: relative;
   @include modifier("about") {
     @include element("content") {
       padding: 45px 40px;
@@ -125,6 +126,17 @@ button {
   @include modifier("projects") {
     @include element("content") {
       width: 80%;
+    }
+  }
+  @include modifier("contact") {
+    margin-bottom: 0;
+    @include element("content") {
+      position: relative;
+      z-index: 5;
+      background-color: rgba(177, 177, 191, 0.6);
+      color: #000;
+      padding: 10px;
+      border-radius: 3px;
     }
   }
 }
@@ -166,6 +178,12 @@ button {
       opacity: 0;
       visibility: hidden;
     }
+    @include element("tags") {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
     &:hover {
       transform: scale(1.5);
       & .projects-list__item__description {
@@ -175,6 +193,13 @@ button {
       }
     }
   }
+}
+
+.project-tag {
+  background-color: #6D401F;
+  border-radius: 3px;
+  padding: 3px 8px;
+  margin: 5px;
 }
 
 .form {
@@ -194,16 +219,29 @@ button {
       width: 50%;
       margin: 0;
     }
+    @include modifier("social") {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      transition: all .2s ease .2s;
+      .fa {
+        margin: 0 8px;
+        font-size: 1.5rem;
+        color: #6D401F;
+      }
+      .link:hover {
+        transform: scale(1.5);
+      }
+    }
   }
   @include element("input") {
     width: 100%;
     padding: 15px 8px;
     font-size: 1.1rem;
     border-radius: 3px;
-    background-color: #DADADA;
     &:focus, &:active {
-      background-color: rgba(177, 177, 191, 0.3);
-      color: #DADADA;
+      opacity: 0.8;
+      color: #000;
     }
   }
 
@@ -222,4 +260,11 @@ button {
       opacity: .8;
     }
   }
+}
+
+.map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
 }
