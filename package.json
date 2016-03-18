@@ -12,6 +12,8 @@
     "babel-preset-es2015-node4": "^2.0.0",
     "bower": "^1.6.5",
     "del": "^2.1.0",
+    "eslint": "^2.4.0",
+    "eslint-config-unstandard": "^1.3.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.0",
@@ -36,6 +38,10 @@
   "scripts": {
     "bower": "bower install --allow-root",
     "build": "gulp build",
+    "lint": "eslint .",
     "postinstall": "npm run bower && npm run build"
+  },
+  "eslintConfig": {
+    "extends": "unstandard"
   }
 }
