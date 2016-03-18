@@ -74,7 +74,7 @@ layout: page.html
         </div>
         <div class="form__group">
           <label class="form__label" for="budget">Budget</label>
-          <input type="text" class="form__input" name="projectBudget" />
+          <input type="number" step=".1" min="100.00" class="form__input" name="projectBudget" />
         </div>
         <input type="hidden" name="_subject" value="New job request" />
         <input type="text" name="_gotcha" style="display:none" />
