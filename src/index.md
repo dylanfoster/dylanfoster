@@ -14,7 +14,7 @@ layout: page.html
 </section>
 
 <section class="section section_about">
-  <h2 id="about" class="heading heading_sub">Me</h2>
+  <h2 id="about" class="heading heading_sub heading_section">Me</h2>
   <div class="section__content">
     <div class="profile-image">
     </div>
@@ -33,7 +33,7 @@ layout: page.html
 </section>
 
 <section class="section section_projects">
-  <h2 id="projects" class="heading heading_sub">My stuffs</h2>
+  <h2 id="projects" class="heading heading_sub heading_section">My stuffs</h2>
   <div class="section__content section_projects__content">
     <div class="projects-list">
       {{#each projects as |project|}}
@@ -50,5 +50,36 @@ layout: page.html
 </section>
 
 <section class="section section_contact">
-  <h2 class="heading heading_sub" id="contact">Beep</h2>
+  <h2 class="heading heading_sub heading_section" id="contact">Beep</h2>
+  <div class="section__content">
+    <form id="contact-form" class="form" action="http://formspree.io/dylan947@gmail.com" method="post">
+      <div class="form__section form__section_input">
+        <div class="form__group">
+          <label class="form__label" for="name">Name</label>
+          <input type="text" class="form__input" name="name" />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="email">Email</label>
+          <input type="email" class="form__input" name="email" />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="type">Project type</label>
+          <input type="text" class="form__input" name="projectType" />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="budget">Budget</label>
+          <input type="text" class="form__input" name="projectBudget" />
+        </div>
+        <input type="hidden" name="_subject" value="New job request" />
+        <input type="text" name="_gotcha" style="display:none" />
+      </div>
+      <div class="form__section form__section_actions">
+        <div class="form__group form__group_submit">
+          <button class="button button_primary" form="contact-form">
+            Say hello!
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
 </section>

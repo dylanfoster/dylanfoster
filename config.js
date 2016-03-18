@@ -19,17 +19,17 @@ module.exports = {
       tags: ["Ember.js", "Node.js", "PostgreSQL"],
       site: "https://github.com/BonfireCMS/bonfire"
     }, {
-      name: "TopSecret",
-      image: "/assets/images/ban.png",
-      description: "This top secret project is going to be huge! Of course, I can't talk about it so you'll just have to wait",
-      tags: ["Node.js", "RESTful", "PostgreSQL"],
-      site: "/ahahah"
+      name: "Hotcakes",
+      image: "/assets/images/hotcakes.png",
+      description: "I was tired of writing the same backend code over and over. That's where Hotcakes comes in. Simply wire up your RESTful routes to their controller's action and profit.",
+      tags: ["Node.js", "OSS"],
+      site: "https://github.com/dylanfoster/hotcakes"
     }, {
-      name: "Apple",
-      image: "/assets/images/apple.png",
-      description: "As an interactive developer at Apple, ....",
-      tags: ["Node.js", "Ember.js", "PostgreSQL", "Docker"],
-      site: "http://apple.com"
+      name: "Twitter",
+      image: "/assets/images/twitter.png",
+      description: "As an QA Lead at Twitter, ....",
+      tags: ["JavaScript", "PHP", "Management", "Customer relations"],
+      site: "http://utest.com"
     }, {
       name: "Google",
       image: "/assets/images/google.png",
@@ -37,11 +37,17 @@ module.exports = {
       tags: ["JavaScript", "PHP", "Management", "Customer relations"],
       site: "http://utest.com"
     }, {
-      name: "Twitter",
-      image: "/assets/images/twitter.png",
-      description: "As an QA Lead at Twitter, ....",
-      tags: ["JavaScript", "PHP", "Management", "Customer relations"],
-      site: "http://utest.com"
+      name: "Apple",
+      image: "/assets/images/apple.png",
+      description: "As an interactive developer at Apple, ....",
+      tags: ["Node.js", "Ember.js", "PostgreSQL", "Docker"],
+      site: "http://apple.com"
+    }, {
+      name: "TopSecret",
+      image: "/assets/images/ban.png",
+      description: "This top secret project is going to be huge! Of course, I can't talk about it so you'll just have to wait",
+      tags: ["Node.js", "RESTful", "PostgreSQL"],
+      site: "/ahahah"
     }]
   }
 };

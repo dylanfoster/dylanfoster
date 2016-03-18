@@ -26,10 +26,26 @@ ul {
   padding: 0;
 }
 
+input {
+  border: none;
+  &:focus {
+    outline: none; }
+}
+
+button {
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
 .heading {
   @include modifier("main") {
     font-size: 3.125rem;
     font-weight: lighter;
+  }
+  @include modifier("section") {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -132,15 +148,17 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  transition: all .2s cubic-bezier(0.5, 0, 0.1, 1);
+  font-size: .8rem;
+  text-align: center;
   @include element("item") {
     width: 300px;
     height: 200px;
-    margin: 8px;
+    margin: 50px 8px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: 50% 50%;
     cursor: pointer;
+    transition: all .2s cubic-bezier(0.5, 0, 0.1, 1) .2s;
     @include element("description") {
       height: 100%;
       width: 100%;
@@ -150,12 +168,58 @@ ul {
     }
     &:hover {
       transform: scale(1.5);
-      transition-delay: .2s;
       & .projects-list__item__description {
-        background-color: rgba(51, 51, 51, 0.8);
+        background-color: rgba(3, 12, 28, 0.8);
         opacity: 1;
         visibility: visible;
       }
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  @include element("section") {
+    @include modifier("actions") {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  @include element("group") {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    @include modifier("submit") {
+      width: 50%;
+      margin: 0;
+    }
+  }
+  @include element("input") {
+    width: 100%;
+    padding: 15px 8px;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    background-color: #DADADA;
+    &:focus, &:active {
+      background-color: rgba(177, 177, 191, 0.3);
+      color: #DADADA;
+    }
+  }
+
+}
+
+.button {
+  border: none;
+  border-radius: 3px;
+  padding: 15px 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  @include modifier("primary") {
+    background-color: #6D401F;
+    color: #DADADA;
+    &:hover {
+      opacity: .8;
     }
   }
 }
