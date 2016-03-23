@@ -4,8 +4,8 @@ node_js:
 
 script: bash ./deploy.sh
 env:
-  NODE_ENV: "production"
   global:
+    - NODE_ENV: "production"
     - GH_REF: "github.com/dylanfoster/dylanfoster.github.io"
     - secure: "PspMMPiluohJJXh70+9sjuZ9GTVPgcqsmbtQjPCc6Vq30RXQZ4fMGHKPTd3dPR0XeMgAlcEiJFDXxG1u1Kg3yUq/H2xaJcnPkfC2q/da3QFQE/sY/YIj1NxhEQPOLUUa954QT2/446X+Iqfr84X6WEV4TD0hyv9GNKptnGIaqFnytHyCYMt76Dpgwr48va8DGrPdJnePIQuioTkEEmZeZKOXtVrHZmhOvNO3rE5AB+oNUhqK2sFK+HfLJDSPR++73dal98zlg55nwzIFyV5n6j9lOfb5KBaBHuNzUntZVlDgLzUBKiWbjIHL7Crp3fBydcewwqm/5wWEj5LUVZPEWu7XlAuMHjS6C7xz7DN9730ClDJ2auqeCF57KQ0T+GB1u1FEOPmrPNBgMDekZf0k5usQg6eCCEC6n3fjEp1jv5dWZnWXVnQpJkz2gzgU0tAuSP8EqvxhPf3pWJ+zCCZ76Op25gd04Vd+gBIjX2eu9mIxMr9JKARDfdEgecn4YNjUrSQJmporkcecHyuS0sN1JrdnD+TTTKSL9ucYj3ZtVVR40Ee9mt/J9MIH2at5CrVWvFon+DSJ2VoWKgBMoxwtHMaG31VMn3MCbR9YDzeWeN6OUgsprwewHkdmP2iIDc/ISJSzmEmQ636vR2C/TUJ8Z1RqBkd8nQNhQJR539a97cY="
 
