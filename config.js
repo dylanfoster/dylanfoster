@@ -2,9 +2,13 @@
 
 const path = require("path");
 
+const env = process.env.NODE_ENV;
+const isProduction = env === "production";
+
 module.exports = {
   buildDir: path.join(__dirname, "_site"),
   meta: {
+    isProductionBuild: isProduction,
     title: "Dylan Foster | Professional and freelance developer",
     projects: [{
       name: "AniFit",

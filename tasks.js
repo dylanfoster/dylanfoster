@@ -7,12 +7,14 @@ const autoprefixer = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const connect = require("gulp-connect");
+const cssMin = require("gulp-clean-css");
 const del = require("del");
 const eslint = require("gulp-eslint");
 const gulpHeader = require("gulp-headerfooter");
 const footer = gulpHeader.footer;
 const gulp = require("gulp");
 const header = gulpHeader.header;
+const imageMin = require("gulp-imagemin");
 const minify = require("gulp-minify");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
@@ -40,6 +42,9 @@ module.exports = {
 
   images() {
     return gulp.src(["images/**/*"])
+      .pipe(imageMin({
+        progressive: true
+      }))
       .pipe(gulp.dest(path.join(BUILD_DIR, "assets/images")));
   },
 
@@ -76,6 +81,7 @@ module.exports = {
       }).on("error", sass.logError))
       .pipe(autoprefixer(autoprefixerOptions))
       .pipe(concat("app.css"))
+      .pipe(cssMin())
       .pipe(sourcemaps.write(path.join("../maps")))
       .pipe(gulp.dest(path.join(BUILD_DIR, "assets/stylesheets")))
       .pipe(connect.reload());
