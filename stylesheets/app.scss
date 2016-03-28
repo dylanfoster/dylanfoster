@@ -91,6 +91,8 @@ button {
 
 .page {
   transform: translateY(-243px);
+  margin: 0 auto;
+  max-width: 1425px;
   &.not-found {
     transform: translateY(0);
     margin-top: 100px;
