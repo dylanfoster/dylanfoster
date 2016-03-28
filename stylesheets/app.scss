@@ -131,11 +131,12 @@ button {
     align-items: center;
     justify-content: center;
     width: 50%;
+    // min-width: 375px;
     margin: 0 auto;
   }
   @include modifier("projects") {
     @include element("content") {
-      width: 80%;
+      width: 90%;
     }
   }
   @include modifier("contact") {
@@ -277,4 +278,24 @@ button {
   height: 100%;
   width: 100%;
   z-index: 3;
+}
+
+@media only screen and (max-width: 720px) {
+  .projects-list {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .tagline {
+    transform: translateY(35%);
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .section {
+    @include element("content") {
+      width: 95%;
+    }
+  }
 }
