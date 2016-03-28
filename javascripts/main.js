@@ -141,3 +141,7 @@ function loadMap() {
 }
 
 window.loadMap = loadMap;
+
+if ("ontouchstart" in document.documentElement) {
+  document.documentElement.className += "touch";
+}

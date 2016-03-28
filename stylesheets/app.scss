@@ -206,6 +206,16 @@ button {
   }
 }
 
+.touch .projects-list {
+  @include element("item") {
+    @include element("description") {
+      background-color: rgba(3, 12, 28, 0.8);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
 .project-tag {
   background-color: #6D401F;
   border-radius: 3px;
