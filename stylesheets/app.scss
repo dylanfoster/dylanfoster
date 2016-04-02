@@ -125,6 +125,11 @@ button {
     @include element("content") {
       padding: 45px 40px;
       border-bottom: 1px solid #DADADA;
+      transform: translateX(400%);
+      transition: transform 1.5s;
+      &.show {
+        transform: translateX(0);
+      }
     }
   }
   @include element("content") {
@@ -161,10 +166,20 @@ button {
   width: 250px;
   border-radius: 100%;
   border: 1px solid #DADADA;
+  transform: translateX(-400%);
+  transition: transform 1.5s;
+  &.show {
+    transform: translateX(0);
+  }
 }
 
 .quote {
   font-style: italic;
+  transform: translateX(-400%);
+  transition: transform 1.5s;
+  &.show {
+    transform: translateX(0);
+  }
 }
 
 .projects-list {
@@ -183,7 +198,13 @@ button {
     background-size: 100% 100%;
     background-position: 50% 50%;
     cursor: pointer;
-    transition: all .2s cubic-bezier(0.5, 0, 0.1, 1) .2s;
+    transition:
+      transform .2s cubic-bezier(0.5, 0, 0.1, 1),
+      opacity .5s ease-out;
+    opacity: 0;
+    &.show {
+      opacity: 1;
+    }
     @include element("description") {
       height: 100%;
       width: 100%;
@@ -207,6 +228,14 @@ button {
     }
   }
 }
+
+#AniFit { transition-delay: 0s; }
+#Bonfire { transition-delay: 0s, .2s; }
+#Hotcakes { transition-delay: 0s, .4s; }
+#Twitter { transition-delay: 0s, .3s; }
+#Google { transition-delay: 0s, .5s; }
+#Apple { transition-delay: 0s, .7s; }
+#TopSecret{ transition-delay: 0s, .6s; }
 
 .touch .projects-list {
   @include element("item") {

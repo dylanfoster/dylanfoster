@@ -86,6 +86,36 @@ class AnchorScroll extends EventedElement {
   }
 }
 
+class Waypoint extends EventedElement {
+  constructor(element, options) {
+    super(element);
+    this.animations = [];
+
+    options.animations.forEach(animation => {
+      this.animations.push({
+        element: new EventedElement(document.querySelector(animation.element)),
+        class: animation.class
+      });
+    });
+  }
+
+  runAnimations() {
+    if (this.animations.length) {
+      this.animations.forEach(animation => {
+        animation.element.addClass(animation.class);
+      });
+    }
+  }
+
+  check() {
+    const target = this.element.getBoundingClientRect().top;
+
+    if (target <= 50) {
+      this.runAnimations();
+    }
+  }
+}
+
 const anchors = makeArray(document.querySelectorAll("a[data-scroll]"));
 const hash = window.location.hash;
 
@@ -98,7 +128,7 @@ if (hash) {
   activeLink.classList.add("active");
 }
 
-window.onscroll = e => {
+function setSectionHighlight() {
   const currentPos = window.scrollY;
   const windowHeight = window.innerHeight;
   const docHeight = document.body.clientHeight;
@@ -125,6 +155,33 @@ window.onscroll = e => {
       lastAnchor.parentNode.classList.add("active");
     }
   }
+}
+
+const about = document.getElementById("about");
+const projects = document.getElementById("projects");
+const aboutWayPoint = new Waypoint(about, {
+  animations: [
+    { element: ".profile-image", class: "show" },
+    { element: ".section_about__content", class: "show" },
+    { element: ".quote", class: "show" }
+  ]
+});
+const projectsWaypoint = new Waypoint(projects, {
+  animations: [
+    { element: "#AniFit", class: "show" },
+    { element: "#Bonfire", class: "show" },
+    { element: "#Hotcakes", class: "show" },
+    { element: "#Twitter", class: "show" },
+    { element: "#Google", class: "show" },
+    { element: "#Apple", class: "show" },
+    { element: "#TopSecret", class: "show" }
+  ]
+});
+
+window.onscroll = e => {
+  setSectionHighlight();
+  aboutWayPoint.check();
+  projectsWaypoint.check();
 };
 
 let map
@@ -145,3 +202,22 @@ window.loadMap = loadMap;
 if ("ontouchstart" in document.documentElement) {
   document.documentElement.className += "touch";
 }
+
+function trackClick(element) {
+  const tracks = element.getAttribute("data-track").split(";");
+  const props = {};
+
+  tracks.forEach(track => {
+    const parts = track.split(":");
+
+    props[parts[0]] = parts[1];
+  });
+
+  element.addEventListener("click", e => {
+    ga("send", "event", props.type, "click", props.label);
+  });
+}
+
+const elementsToTrack = makeArray(document.querySelectorAll("a[data-track]"));
+
+elementsToTrack.forEach(trackClick);

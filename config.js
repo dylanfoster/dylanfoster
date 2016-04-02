@@ -9,6 +9,20 @@ module.exports = {
   buildDir: path.join(__dirname, "_site"),
   meta: {
     isProductionBuild: isProduction,
+    seo: {
+      og: {
+        title: "Dylan Foster | Professional and freelance developer",
+        type: "website",
+        url: "http://dylanfoster.github.io",
+        description: "Dylan Foster is a fulltime developer and entrepeneur. Contact today to start your project."
+      },
+      twitter: {
+        card: "summary",
+        site: "@dylfos",
+        creator: "@dylfos",
+        description: "Dylan Foster is a fulltime developer and entrepeneur. Contact today to start your project."
+      }
+    },
     title: "Dylan Foster | Professional and freelance developer",
     projects: [{
       name: "AniFit",

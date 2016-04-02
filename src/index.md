@@ -37,8 +37,8 @@ layout: page.html
   <div class="section__content section_projects__content">
     <div class="projects-list">
       {{#each projects as |project|}}
-      <a href="{{project.site}}" target="_blank" class="link link_primary">
-        <div class="projects-list__item" style="background-image: url('{{project.image}}');">
+      <a data-track="type:link;label:{{project.name}} - external"href="{{project.site}}" target="_blank" class="link link_primary">
+        <div id="{{project.name}}" class="projects-list__item" style="background-image: url('{{project.image}}');">
           <div class="projects-list__item__description">
             <p>{{project.description}}</p>
             <div class="projects-list__item__tags">
